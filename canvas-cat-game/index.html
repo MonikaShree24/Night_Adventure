@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Night Cat Adventure</title>
+    <meta charset="UTF-8">
+    <div style="margin-bottom:10px;">
+    <button id="musicBtn">🔊 Music OFF</button>
+</div>
+
+    <!-- Google Funky Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00eaff;
+            font-size: 38px;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px #00eaff,
+                         0 0 20px #0088ff;
+            animation: glow 2s infinite alternate;
+            margin-bottom: 15px;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #00eaff; }
+            50% { text-shadow: 0 0 25px #ff00cc; }
+            100% { text-shadow: 0 0 10px #00eaff; }
+        }
+        
+
+        canvas {
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🌙 Night Cat Adventure 🐱</h1>
+
+<audio id="bgMusic" src="bg.mp3" loop preload="auto"></audio>
+
+<canvas id="gameCanvas" width="500" height="600"></canvas>
+
+<script src="game.js"></script>
+
+</body>
+</html>
